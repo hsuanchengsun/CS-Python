@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+graph [ranksep=equally, splines=polyline] ;
+0 [label="Volume <= 48950.0\ngini = 0.499\nsamples = 8000\nvalue = [4172, 3828]\nclass = negative", fillcolor="#e5813915"] ;
+1 [label="Volume <= 3650.0\ngini = 0.498\nsamples = 2492\nvalue = [1168, 1324]\nclass = positive", fillcolor="#399de51e"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Close <= 3062.5\ngini = 0.447\nsamples = 261\nvalue = [88, 173]\nclass = positive", fillcolor="#399de57d"] ;
+1 -> 2 ;
+3 [label="gini = 0.472\nsamples = 176\nvalue = [67, 109]\nclass = positive", fillcolor="#399de562"] ;
+2 -> 3 ;
+4 [label="gini = 0.372\nsamples = 85\nvalue = [21, 64]\nclass = positive", fillcolor="#399de5ab"] ;
+2 -> 4 ;
+5 [label="Volume <= 47050.0\ngini = 0.499\nsamples = 2231\nvalue = [1080, 1151]\nclass = positive", fillcolor="#399de510"] ;
+1 -> 5 ;
+6 [label="gini = 0.5\nsamples = 2173\nvalue = [1064, 1109]\nclass = positive", fillcolor="#399de50a"] ;
+5 -> 6 ;
+7 [label="gini = 0.4\nsamples = 58\nvalue = [16, 42]\nclass = positive", fillcolor="#399de59e"] ;
+5 -> 7 ;
+8 [label="Close <= 148.5\ngini = 0.496\nsamples = 5508\nvalue = [3004, 2504]\nclass = negative", fillcolor="#e581392a"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="High <= 144.5\ngini = 0.4\nsamples = 58\nvalue = [16, 42]\nclass = positive", fillcolor="#399de59e"] ;
+8 -> 9 ;
+10 [label="gini = 0.44\nsamples = 49\nvalue = [16, 33]\nclass = positive", fillcolor="#399de583"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 9\nvalue = [0, 9]\nclass = positive", fillcolor="#399de5ff"] ;
+9 -> 11 ;
+12 [label="Volume <= 266700.0\ngini = 0.495\nsamples = 5450\nvalue = [2988, 2462]\nclass = negative", fillcolor="#e581392d"] ;
+8 -> 12 ;
+13 [label="gini = 0.499\nsamples = 2594\nvalue = [1367, 1227]\nclass = negative", fillcolor="#e581391a"] ;
+12 -> 13 ;
+14 [label="gini = 0.491\nsamples = 2856\nvalue = [1621, 1235]\nclass = negative", fillcolor="#e581393d"] ;
+12 -> 14 ;
+{rank=same ; 0} ;
+{rank=same ; 1; 8} ;
+{rank=same ; 2; 5; 9; 12} ;
+{rank=same ; 3; 4; 6; 7; 10; 11; 13; 14} ;
+}
